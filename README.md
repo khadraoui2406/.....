@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>B2 Training – Lesen Teil 1</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 30px;
+      color: #333;
+    }
+
+    .btn {
+      background: #1e90ff;
+      color: white;
+      padding: 15px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #187bcd;
+    }
+
+    .question {
+      margin-top: 30px;
+      font-size: 18px;
+      padding: 10px 20px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>B2 Lesen – Teil 1</h1>
+
+<!-- أزرار المواضيع -->
+<button class="btn" onclick="showText('umwelt')">Umwelt</button>
+<button class="btn" onclick="showText('impfung')">Impfung</button>
+<button class="btn" onclick="showText('sport')">Sport</button>
+
+<!-- المكان اللي باش يطلع فيه النص -->
+<div class="question" id="content"></div>
+
+<script>
+  function showText(topic) {
+    let text = "";
+
+    if (topic === "umwelt") {
+      text = "Viele Menschen achten heute mehr auf die Umwelt. Recycling und Energieeinsparung sind wichtige Maßnahmen.";
+    }
+
+    if (topic === "impfung") {
+      text = "Impfungen schützen nicht nur einzelne Personen, sondern auch die Gesellschaft vor ansteckenden Krankheiten.";
+    }
+
+    if (topic === "sport") {
+      text = "Regelmäßiger Sport ist wichtig für die körperliche und geistige Gesundheit. Kinder und Erwachsene sollten aktiv bleiben.";
+    }
+
+    document.getElementById("content").innerText = text;
+  }
+</script>
+
+</body>
+</html>
